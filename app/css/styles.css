@@ -1,0 +1,100 @@
+.wrap {
+  position: relative;
+  width: 1024px;
+  height: 1024px;
+  margin: auto;
+  background-image: url(../images/background.jpg); }
+  .wrap .main {
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 535px;
+    height: 880px;
+    margin-bottom: 95px;
+    background: white;
+    font-family: "Varela", sans-serif;
+    box-shadow: 10px 15px 18px #00000063; }
+    .wrap .main .cube1 {
+      height: 95px;
+      position: relative; }
+      .wrap .main .cube1 .left .avatar {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background: rebeccapurple;
+        border-radius: 50%; }
+      .wrap .main .cube1 .left .name {
+        position: absolute;
+        top: 22px;
+        left: 85px;
+        font-size: 17px;
+        font-weight: 600; }
+      .wrap .main .cube1 .left .description {
+        position: absolute;
+        top: 48px;
+        left: 85px;
+        font-size: 15px;
+        color: #a6a6a6; }
+      .wrap .main .cube1 .right .follow {
+        position: absolute;
+        top: 30px;
+        right: 45px;
+        padding: 8px 30px;
+        border: 3px solid #42b2fc;
+        border-radius: 6px;
+        background: white;
+        color: #42b2fc;
+        font-weight: bold; }
+      .wrap .main .cube1 .right .more {
+        position: absolute;
+        top: 19px;
+        right: -8px;
+        position: absolute;
+        font-size: 42px;
+        transform: rotate(90deg); }
+    .wrap .main .cube2 {
+      height: 540px;
+      background: linear-gradient(to right, #d4d4d4, #dddddf);
+      position: relative; }
+      .wrap .main .cube2 img {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%); }
+    .wrap .main .bottom .cube3 {
+      width: 495px;
+      height: 150px;
+      padding-top: 20px;
+      margin-left: 28px; }
+      .wrap .main .bottom .cube3 .behavior {
+        height: 40px;
+        width: 480px; }
+        .wrap .main .bottom .cube3 .behavior .left {
+          width: 160px;
+          display: inline-block; }
+          .wrap .main .bottom .cube3 .behavior .left img {
+            margin-right: 15px; }
+        .wrap .main .bottom .cube3 .behavior .right {
+          width: 40px;
+          display: inline-block;
+          float: right; }
+      .wrap .main .bottom .cube3 .content .like {
+        margin-top: 20px;
+        font-size: 19px;
+        font-weight: 600; }
+        .wrap .main .bottom .cube3 .content .like img {
+          margin-right: 10px; }
+      .wrap .main .bottom .cube3 .content .tag {
+        margin-top: 20px; }
+        .wrap .main .bottom .cube3 .content .tag .text1 {
+          display: inline-block; }
+        .wrap .main .bottom .cube3 .content .tag .text2 {
+          display: inline-block;
+          margin-right: 65px;
+          float: right;
+          font-weight: 400;
+          color: #356bb4; }

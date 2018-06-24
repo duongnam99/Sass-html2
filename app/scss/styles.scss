@@ -1,0 +1,139 @@
+
+$font: 'Varela', sans-serif;
+$font-size1: 15px;
+$font-size2: 17px;
+$font-size3: 19px;
+$font-size4: 42px;
+
+$main-height: 880px;
+$cube1-height: 95px;
+$cube2-height: 540px;
+$like-tag-margin-top: 20px;
+@mixin position1($position, $top, $left) {
+	position: $position;
+	top: $top;
+	left: $left;
+}
+@mixin position2($position, $top, $right) {
+	position: $position;
+	top: $top;
+	right: $right;
+}
+@mixin avatar($width) {
+	width: $width;
+	height: $width;
+}
+.wrap {
+    position: relative;
+    width: 1024px;
+    height: 1024px;
+    margin: auto;
+    background-image: url(../images/background.jpg);
+    .main {
+    	@include position1(absolute, 95px, 50%)
+	    transform: translateX(-50%);
+	    width: 535px;
+	    height: $main-height;
+	    margin-bottom: 95px;
+	    background: white;
+	    font-family: $font;
+	    box-shadow: 10px 15px 18px #00000063;
+	    .cube1 {
+			height: $cube1-height;
+	   		position: relative;
+	   		.left{
+	   			.avatar {
+	   				@include position1(absolute, 20px, 20px);
+	   				@include avatar(50px);
+				    display: inline-block;
+				    background: rebeccapurple;
+				    border-radius: 50%;
+				    
+				}
+				.name {
+				    @include position1(absolute, 22px, 85px);
+				    font-size: $font-size2;
+				    font-weight: 600;
+				}
+				.description {
+				    @include position1(absolute, 48px, 85px);
+				    font-size: $font-size1;
+				    color: #a6a6a6;
+				}
+	   		}
+	   		.right {
+	   			.follow {
+	   				@include position2(absolute, 30px, 45px);
+				    padding: 8px 30px;
+				    border: 3px solid #42b2fc;
+				    border-radius: 6px;
+				    background: white;
+				    color: #42b2fc;
+				    font-weight: bold;
+				}
+				.more {
+					@include position2(absolute, 19px, -8px);
+				    position: absolute;
+				    font-size: $font-size4;
+				    transform: rotate(90deg);
+				}
+	   		}
+		}
+		.cube2{
+			height: $cube2-height;
+		    background: linear-gradient(to right, rgb(212, 212, 212), rgb(221, 221, 223));
+		    position: relative;
+		    img {
+		    	@include position1(absolute, 170px, 50%);
+			    transform: translateX(-50%);
+		    }
+		}
+		.bottom {
+			.cube3 {
+				width: 495px;
+			    height: 150px;
+			    padding-top: 20px;
+			    margin-left: 28px;
+			    .behavior{
+			    	height: 40px;
+   					width: 480px;
+   					.left {
+   						width: 160px;
+    					display: inline-block;
+    					img {
+						    margin-right: 15px;
+						}
+   					}
+   					.right {
+   						width: 40px;
+					    display: inline-block;
+					    float: right;
+   					}
+			    }
+			    .content {
+			    	.like{
+			    		margin-top: $like-tag-margin-top;
+					    font-size: $font-size3;
+					    font-weight: 600;
+					    img {
+	    					margin-right: 10px;
+	    				}
+			    	}
+			    	.tag {
+						margin-top: $like-tag-margin-top;
+						.text1 {
+						    display: inline-block;
+						}
+						.text2 {
+						    display: inline-block;
+						    margin-right: 65px;
+						    float: right;
+						    font-weight: 400;
+						    color: #356bb4;
+						}
+			    	}
+			    }
+			}
+		}
+	}
+}
